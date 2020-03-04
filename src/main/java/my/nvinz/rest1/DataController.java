@@ -2,7 +2,7 @@ package my.nvinz.rest1;
 
 public class DataController {
 
-    private class Data {
+    public class Data {
         private String latitude;
         private String longtitude;
 
@@ -36,5 +36,9 @@ public class DataController {
     public void setData(String latitude, String longtitude) {
         data.setLatitude(latitude);
         data.setLongtitude(longtitude);
+    }
+
+    public void setData(Data data) {
+        this.data = data;
     }
 }
