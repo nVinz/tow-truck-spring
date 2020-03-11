@@ -5,7 +5,13 @@ public class Data {
     private String longtitude;
 
     public Data() {
+        this.latitude = "";
+        this.longtitude = "";
+    }
 
+    public Data(String latitude, String longtitude) {
+        this.latitude = latitude;
+        this.longtitude = longtitude;
     }
 
     public String getLatitude() {
@@ -22,5 +28,15 @@ public class Data {
 
     public void setLongtitude(String longtitude) {
         this.longtitude = longtitude;
+    }
+
+    public void setData(String latitude, String longtitude) {
+        this.latitude = latitude;
+        this.longtitude = longtitude;
+    }
+
+    public void setData(Data data) {
+        this.latitude = data.getLatitude();
+        this.longtitude = data.getLongtitude();
     }
 }
