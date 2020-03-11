@@ -8,6 +8,7 @@ import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 
+@CrossOrigin(maxAge = 3600)
 @RestController
 public class Rest1RestController {
 

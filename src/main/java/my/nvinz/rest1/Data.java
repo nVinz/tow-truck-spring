@@ -5,8 +5,8 @@ public class Data {
     private String longtitude;
 
     public Data() {
-        this.latitude = "";
-        this.longtitude = "";
+        this.latitude = "55.675273";
+        this.longtitude = "37.857642";
     }
 
     public Data(String latitude, String longtitude) {
