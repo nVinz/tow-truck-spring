@@ -13,7 +13,7 @@ public class Rest1RestController {
         return dataController.getData();
     }
 
-    @PostMapping(value = "/getData", consumes = Med)
+    @RequestMapping(value = "/getData", method = RequestMethod.POST/*, consumes = MediaType.TEXT_PLAIN_VALUE*/)
     public void setData(@RequestBody DataController.Data data) {
         dataController.setData(data);
         System.out.println(dataController.getData());
