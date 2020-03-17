@@ -1,12 +1,7 @@
 package my.nvinz.rest1;
 
-import org.json.simple.JSONObject;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;
-
-import java.io.File;
-import java.io.FileWriter;
-import java.io.IOException;
 
 @CrossOrigin(maxAge = 3600)
 @RestController
