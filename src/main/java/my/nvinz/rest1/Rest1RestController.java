@@ -26,7 +26,8 @@ public class Rest1RestController {
         jsonData.put("latitude", data.getLatitude());
         jsonData.put("longtitude", data.getLongtitude());
 
-        try (FileWriter file = new FileWriter("data.json")) {
+        try {
+            FileWriter file = new FileWriter("data.json");
             file.write(jsonData.toJSONString());
             file.flush();
         } catch (IOException e) {

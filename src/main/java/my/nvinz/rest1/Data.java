@@ -3,6 +3,7 @@ package my.nvinz.rest1;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 
+import java.io.File;
 import java.io.FileReader;
 
 public class Data {
@@ -10,14 +11,15 @@ public class Data {
     private String longtitude;
 
     public Data() {
-        try (FileReader reader = new FileReader("data.json")) {
+        try {
+            FileReader reader = new FileReader(new File("data.json"));
             JSONObject jsonData = (JSONObject) new JSONParser().parse(reader);
             this.latitude = (String) jsonData.get("latitude");
             this.longtitude = (String) jsonData.get("longtitude");
         } catch (Exception e) {
             this.latitude = "55.675273";
             this.longtitude = "37.857642";
-            e.printStackTrace();
+            System.out.println("[ERROR]: Location file does not exist!");
         }
     }
 
